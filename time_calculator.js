@@ -30,13 +30,17 @@ export default class TimeCalculator {
     };
   }
 
-  calcTimeDifference(departureCity, arrivalCity) {
-    const departureZone = cities[departureCity];
-    const arrivalZone = cities[arrivalCity];
+  calcTimeDifference(departureCity, arrivalCity, departureDateTime) {
+    const baseDateTime = DateTime.fromFormat(
+      departureDateTime,
+      "yyyy/MM/dd HH:mm",
+      {
+        zone: cities[departureCity],
+      },
+    );
 
-    const now = DateTime.now();
-    const departureTime = now.setZone(departureZone);
-    const arrivalTime = now.setZone(arrivalZone);
+    const departureTime = baseDateTime.setZone(cities[departureCity]);
+    const arrivalTime = baseDateTime.setZone(cities[arrivalCity]);
 
     const diffInHours = arrivalTime.offset - departureTime.offset;
 

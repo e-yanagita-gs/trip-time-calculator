@@ -26,6 +26,7 @@ const arrivalDetails = await timeCalculator.calcArrivalDateTime(
 const timeDifference = timeCalculator.calcTimeDifference(
   departureCity,
   arrivalCity,
+  departureDateTime,
 );
 
 console.log(`出発: ${departureCity} - ${departureDateTime} ※現地時間`);
