@@ -1,0 +1,38 @@
+{
+  "name": "trip-time-calculator",
+  "version": "1.0.2",
+  "main": "index.js",
+  "bin": {
+    "trip-time-calculator": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix": "prettier --write . && eslint --fix .",
+    "lint": "prettier --check . && eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e-yanagita-gs/trip-time-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/e-yanagita-gs/trip-time-calculator/issues"
+  },
+  "homepage": "https://github.com/e-yanagita-gs/trip-time-calculator#readme",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "enquirer": "^2.4.1",
+    "luxon": "^3.6.1"
+  }
+}
